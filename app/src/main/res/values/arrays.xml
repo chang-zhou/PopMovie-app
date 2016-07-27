@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_orderBy_options">
+        <item>@string/pref_orderBy_popular_label</item>
+        <item>@string/pref_orderBy_rate_label</item>
+    </string-array>
+
+    <string-array name="pref_orderBy_values">
+        <item>@string/pref_order_by_popular_value</item>
+        <item>@string/pref_order_by_rate_value</item>
+    </string-array>
+</resources>
