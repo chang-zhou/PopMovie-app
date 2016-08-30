@@ -35,6 +35,7 @@ import java.util.ArrayList;
  * Created by lay42 on 7/23/2016.
  */
 public class PosterFragment extends Fragment {
+    private static final String LOG_TAG = PosterFragment.class.getSimpleName();
 
     private ArrayList<String> urlData = new ArrayList<>();
 
@@ -151,6 +152,7 @@ public class PosterFragment extends Fragment {
     public void onStart(){
         super.onStart();
         updateUrlData();
+
     }
 
 
@@ -177,16 +179,20 @@ public class PosterFragment extends Fragment {
                 results.add(poster_url);
 
                 ArrayList<String> detail = new ArrayList<>();
+
                 String original_title = poster.getString("original_title");
                 String overview = poster.getString("overview");
                 String user_rating = poster.getDouble("vote_average") + "/10";
                 String release_date = poster.getString("release_date");
+                String movie_id = poster.getString("id");
 
                 detail.add(original_title);
                 detail.add(poster_url);
                 detail.add(overview);
                 detail.add(user_rating);
                 detail.add(release_date);
+                detail.add(movie_id);
+
                 detailsData.add(detail);
             }
 
@@ -291,6 +297,7 @@ public class PosterFragment extends Fragment {
                     urlData.add(url);
                 }
                 // New data is back from the server.  Hooray!
+
             }
         }
     }
